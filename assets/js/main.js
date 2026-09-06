@@ -4,17 +4,17 @@
   // aqui no aplica al ser HTML estatico, pero se mantiene la logica identica).
   const field = document.querySelector('[data-amset-particles]');
   if (field) {
-    const count = 24;
+    const count = 42;
     for (let i = 0; i < count; i++) {
       const dot = document.createElement('div');
-      const big = i % 5 === 0;
+      const big = i % 4 === 0;
       dot.className = 'particle';
       dot.style.left = Math.random() * 100 + '%';
       dot.style.top = Math.random() * 100 + '%';
-      dot.style.width = (big ? 3 : 1.5) + 'px';
-      dot.style.height = (big ? 3 : 1.5) + 'px';
-      dot.style.opacity = big ? 0.35 : 0.2;
-      dot.style.boxShadow = big ? '0 0 6px rgba(0,212,255,0.6)' : 'none';
+      dot.style.width = (big ? 4 : 2) + 'px';
+      dot.style.height = (big ? 4 : 2) + 'px';
+      dot.style.opacity = big ? 0.55 : 0.35;
+      dot.style.boxShadow = big ? '0 0 8px rgba(0,212,255,0.75)' : '0 0 3px rgba(0,212,255,0.4)';
       dot.style.animationDelay = Math.random() * 6 + 's';
       dot.style.animationDuration = 5 + Math.random() * 5 + 's';
       field.appendChild(dot);
