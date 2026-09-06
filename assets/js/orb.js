@@ -27,7 +27,9 @@
     const size = mount.getAttribute('data-size') || 340;
     mount.style.position = 'relative';
     mount.style.width = size + 'px';
-    mount.style.height = size + 'px';
+    mount.style.maxWidth = '100%';
+    mount.style.aspectRatio = '1 / 1';
+    mount.style.height = 'auto';
 
     const glow = document.createElement('div');
     glow.style.cssText = `position:absolute;inset:-10%;border-radius:50%;pointer-events:none;filter:blur(24px);background:radial-gradient(circle, ${COLOR}40 0%, transparent 65%);`;
