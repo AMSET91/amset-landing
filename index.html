@@ -18,6 +18,8 @@
 </head>
 <body>
 
+  <div class="scanline-overlay"></div>
+
   <div class="bg-scene">
     <div class="bg-glow-top"></div>
     <div class="bg-glow-bottom"></div>
@@ -46,9 +48,16 @@
     </div>
   </header>
 
+  <div class="status-bar">
+    <div class="wrap">
+      <span class="status-live"><span class="status-dot"></span> Sistema AMSET.tech — en línea</span>
+      <span class="status-clock" data-amset-clock></span>
+    </div>
+  </div>
+
   <main>
     <section class="hero">
-      <div class="wrap" style="display:contents;">
+      <div class="wrap">
         <div>
           <p class="eyebrow">Desarrollo de software · IA aplicada</p>
           <h1>Construimos con <span class="accent">inteligencia artificial</span>.<br />No hablamos de ella.</h1>
@@ -59,6 +68,7 @@
           </div>
         </div>
         <div class="hero-visual">
+          <span class="corner-tl"></span><span class="corner-br"></span>
           <div data-amset-orb data-size="360"></div>
         </div>
       </div>
@@ -156,23 +166,55 @@
           <div class="proof-card reveal">
             <span class="proof-tag">En producción</span>
             <h3>Software de facturación</h3>
-            <p>Presupuestos, facturas y cobros gestionados de principio a fin con software construido por nosotros. Lo usamos para facturar nuestro propio trabajo.</p>
-            <a class="proof-link" href="https://facturacion.amset.tech" target="_blank" rel="noopener">Ver facturacion.amset.tech</a>
+            <p>Presupuestos, facturas y cobros gestionados de principio a fin con software construido por nosotros. Lo usamos para facturar nuestro propio trabajo — herramienta interna, no un producto público.</p>
+            <span class="proof-note">Uso interno</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="contact-section">
+    <section id="contacto">
       <div class="wrap">
-        <p class="eyebrow" style="justify-content:center;">Hablemos</p>
-        <h2 class="reveal">¿Tienes un proyecto en mente?</h2>
-        <p class="lead reveal">Cuéntanos qué necesitas. Respondemos directo, sin formularios eternos ni departamento comercial de por medio.</p>
-        <div class="btn-row reveal">
-          <a class="btn btn-primary" href="mailto:desarrollo@amset.tech">Escríbenos</a>
-          <a class="btn btn-ghost" href="https://wa.me/34663249765?text=Hola%20AMSET%2C%20quiero%20hablar%20sobre%20un%20proyecto" target="_blank" rel="noopener">WhatsApp directo</a>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="eyebrow">Hablemos</p>
+            <h2>¿Tienes un proyecto en mente?</h2>
+            <p class="lead">Cuéntanos qué necesitas. Respondemos directo, sin formularios eternos ni departamento comercial de por medio.</p>
+            <div class="contact-list">
+              <div class="contact-list-item">
+                <a href="mailto:desarrollo@amset.tech" style="display:flex; align-items:center; gap:16px;">
+                  <span class="contact-list-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m4 7 8 6 8-6"></path></svg>
+                  </span>
+                  <span>
+                    <span class="contact-list-label">Email</span>
+                    <span class="contact-list-value">desarrollo@amset.tech</span>
+                  </span>
+                </a>
+              </div>
+              <div class="contact-list-item">
+                <a href="https://wa.me/34663249765?text=Hola%20AMSET%2C%20quiero%20hablar%20sobre%20un%20proyecto" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:16px;">
+                  <span class="contact-list-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.36 7.58L4 20l1.05-4.44A8.5 8.5 0 1 1 21 11.5Z"></path><path d="M8.5 10.5c.3 2.5 2.5 4.5 5 4.8"></path></svg>
+                  </span>
+                  <span>
+                    <span class="contact-list-label">WhatsApp</span>
+                    <span class="contact-list-value">+34 663 249 765</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-panel reveal">
+            <p class="eyebrow">Contacto directo</p>
+            <p class="panel-lead">Sin intermediarios: hablas directamente con quien va a construir tu proyecto.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="mailto:desarrollo@amset.tech">Escríbenos</a>
+              <a class="btn btn-ghost" href="https://wa.me/34663249765?text=Hola%20AMSET%2C%20quiero%20hablar%20sobre%20un%20proyecto" target="_blank" rel="noopener">WhatsApp directo</a>
+            </div>
+            <p class="response-note"><span class="status-dot"></span> Normalmente respondemos en menos de 24h</p>
+          </div>
         </div>
-        <p class="contact-detail">desarrollo@amset.tech · +34 663 249 765</p>
       </div>
     </section>
   </main>
@@ -181,7 +223,7 @@
     <div class="wrap">
       <div class="footer-brand">
         <img src="/assets/img/logo-texto-2.png" alt="AMSET" />
-        <span style="font-family:var(--font-display); font-size:0.68rem; letter-spacing:0.08em; color:var(--text-faint);">© 2026 AMSET</span>
+        <span style="font-family:var(--font-display); font-size:0.68rem; letter-spacing:0.08em; color:var(--text-faint);">© <span data-amset-year></span> AMSET — Todos los derechos reservados</span>
       </div>
       <div class="footer-meta">
         <a href="https://facturacion.amset.tech" target="_blank" rel="noopener">Facturación</a>

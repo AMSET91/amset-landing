@@ -49,4 +49,23 @@
       links.style.display = open ? 'none' : 'flex';
     });
   }
+
+  // Ano dinamico del footer
+  document.querySelectorAll('[data-amset-year]').forEach((el) => {
+    el.textContent = new Date().getFullYear();
+  });
+
+  // Reloj en vivo de la barra de estado - localizado segun el idioma de la pagina
+  const clockEl = document.querySelector('[data-amset-clock]');
+  if (clockEl) {
+    const locale = document.documentElement.lang === 'en' ? 'en-GB' : 'es-ES';
+    const fmt = new Intl.DateTimeFormat(locale, {
+      timeZone: 'Europe/Madrid',
+      day: '2-digit', month: '2-digit', year: 'numeric',
+      hour: '2-digit', minute: '2-digit',
+    });
+    const tick = () => { clockEl.textContent = fmt.format(new Date()); };
+    tick();
+    setInterval(tick, 30000);
+  }
 })();
