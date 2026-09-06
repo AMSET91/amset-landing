@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
-
 :root {
   --bg: #00020a;
   --bg-panel: rgba(255, 255, 255, 0.03);
@@ -7,11 +5,11 @@
   --border: rgba(0, 212, 255, 0.16);
   --border-soft: rgba(0, 212, 255, 0.08);
   --cyan: #00d4ff;
-  --cyan-soft: rgba(0, 212, 255, 0.55);
+  --cyan-soft: rgba(0, 212, 255, 0.68);
   --violet: #7800ff;
   --text: #eaf6ff;
   --text-dim: rgba(234, 246, 255, 0.62);
-  --text-faint: rgba(234, 246, 255, 0.38);
+  --text-faint: rgba(234, 246, 255, 0.58);
   --font-display: 'Orbitron', monospace;
   --font-body: 'Inter', -apple-system, sans-serif;
   --max-w: 1180px;
